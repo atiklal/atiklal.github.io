@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Atik Mohan Lal | Senior Solutions Architect, Enterprise Content Management</title>
+<meta name="description" content="Atik Mohan Lal is a Senior Solutions Architect with nearly 20 years of hands-on Documentum experience, building and leading enterprise content platforms for energy, nuclear, pharmaceutical and transportation organizations.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=Public+Sans:ital,wght@0,400;0,500;0,600;1,400&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --ink:#161A3A;
+    --paper:#F7F8FC;
+    --cobalt:#2F4BFF;
+    --cobalt-deep:#1E33C8;
+    --saffron:#FFB020;
+    --slate:#565D7A;
+    --line:#DDE1EE;
+    --white:#FFFFFF;
+    --display:"Bricolage Grotesque", "Segoe UI", sans-serif;
+    --body:"Public Sans", "Segoe UI", Roboto, Arial, sans-serif;
+    --mono:"IBM Plex Mono", Consolas, monospace;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{font-family:var(--body);font-size:17px;line-height:1.65;color:var(--ink);background:var(--paper);-webkit-font-smoothing:antialiased}
+  img{max-width:100%}
+  a{color:var(--cobalt-deep)}
+  a:focus-visible,button:focus-visible{outline:3px solid var(--saffron);outline-offset:3px;border-radius:4px}
+  .wrap{max-width:1120px;margin:0 auto;padding:0 32px}
+  h1,h2,h3{font-family:var(--display);line-height:1.1;letter-spacing:-0.02em}
+  .skip{position:absolute;left:-999px;top:8px;background:var(--ink);color:#fff;padding:8px 14px;z-index:99}
+  .skip:focus{left:8px}
+
+  /* Navigation */
+  .nav{position:sticky;top:0;z-index:20;background:rgba(247,248,252,.92);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+  .nav .wrap{display:flex;align-items:center;justify-content:space-between;height:68px}
+  .logo{font-family:var(--display);font-weight:800;font-size:20px;color:var(--ink);text-decoration:none;display:flex;align-items:center;gap:10px}
+  .logo i{display:inline-block;width:14px;height:18px;background:var(--cobalt);border-radius:2px 7px 2px 2px}
+  .nav ul{list-style:none;display:flex;align-items:center;gap:30px}
+  .nav ul a{color:var(--slate);text-decoration:none;font-size:15px;font-weight:500}
+  .nav ul a:hover{color:var(--ink)}
+  .nav ul a.pill{color:#fff;background:var(--ink);padding:9px 18px;border-radius:999px}
+  .nav ul a.pill:hover{background:var(--cobalt)}
+
+  /* Hero */
+  .hero{padding:88px 0 96px;position:relative;overflow:hidden}
+  .hero::before{content:"";position:absolute;right:-180px;top:-140px;width:620px;height:620px;border-radius:50%;background:radial-gradient(circle at 40% 40%, rgba(47,75,255,.16), rgba(47,75,255,0) 65%);pointer-events:none}
+  .hero .wrap{display:grid;grid-template-columns:1.12fr .88fr;gap:64px;align-items:center;position:relative}
+  .hero h1{font-size:clamp(40px,5vw,64px);font-weight:800;margin-bottom:26px;max-width:15ch}
+  .hero .lede{font-size:20px;color:var(--slate);max-width:34em;margin-bottom:36px}
+  .actions{display:flex;flex-wrap:wrap;gap:14px}
+  .btn{display:inline-flex;align-items:center;justify-content:center;font-weight:600;font-size:16px;padding:14px 26px;border-radius:10px;text-decoration:none;transition:background .2s, color .2s, border-color .2s}
+  .btn-primary{background:var(--cobalt);color:#fff}
+  .btn-primary:hover{background:var(--cobalt-deep)}
+  .btn-secondary{border:2px solid var(--ink);color:var(--ink)}
+  .btn-secondary:hover{background:var(--ink);color:#fff}
+
+  /* The signature element: a profile rendered as a content object */
+  .object{background:var(--ink);color:#E8EAF6;border-radius:18px;padding:26px 28px 24px;box-shadow:0 30px 60px -28px rgba(22,26,58,.55);position:relative}
+  .object::after{content:"";position:absolute;top:0;right:0;width:46px;height:46px;background:linear-gradient(225deg,var(--paper) 50%, #2A3070 50%);border-radius:0 18px 0 10px}
+  .object-head{display:flex;align-items:center;gap:12px;padding-bottom:16px;margin-bottom:14px;border-bottom:1px solid rgba(255,255,255,.12)}
+  .object-head .doc{width:34px;height:42px;border-radius:4px 12px 4px 4px;background:var(--cobalt);position:relative;flex:none}
+  .object-head .doc::before,.object-head .doc::after{content:"";position:absolute;left:8px;right:8px;height:2px;background:rgba(255,255,255,.7);border-radius:2px}
+  .object-head .doc::before{top:15px}
+  .object-head .doc::after{top:22px;right:13px}
+  .object-head strong{font-family:var(--display);font-size:20px;color:#fff;display:block;line-height:1.2}
+  .object-head span{font-size:13px;color:#9EA5D0}
+  .props{font-family:var(--mono);font-size:14px;line-height:1.5}
+  .props div{display:grid;grid-template-columns:150px 1fr;gap:12px;padding:7px 0;border-bottom:1px dashed rgba(255,255,255,.08)}
+  .props div:last-child{border-bottom:none}
+  .props dt{color:#8D95C4}
+  .props dd{color:#fff}
+  .props .status{display:inline-flex;align-items:center;gap:8px;color:var(--saffron)}
+  .props .status::before{content:"";width:8px;height:8px;border-radius:50%;background:var(--saffron);box-shadow:0 0 0 4px rgba(255,176,32,.2)}
+  @media (prefers-reduced-motion:no-preference){
+    .props div{opacity:0;transform:translateY(6px);animation:reveal .45s ease forwards}
+    .props div:nth-child(1){animation-delay:.15s}.props div:nth-child(2){animation-delay:.27s}
+    .props div:nth-child(3){animation-delay:.39s}.props div:nth-child(4){animation-delay:.51s}
+    .props div:nth-child(5){animation-delay:.63s}.props div:nth-child(6){animation-delay:.75s}
+    .props div:nth-child(7){animation-delay:.87s}
+    @keyframes reveal{to{opacity:1;transform:none}}
+  }
+
+  /* Industries band */
+  .band{background:var(--cobalt);color:#fff;padding:26px 0}
+  .band .wrap{display:flex;flex-wrap:wrap;align-items:center;gap:14px 34px}
+  .band p{font-family:var(--display);font-weight:700;font-size:18px;margin-right:6px}
+  .band ul{list-style:none;display:flex;flex-wrap:wrap;gap:10px}
+  .band li{background:rgba(255,255,255,.14);border-radius:999px;padding:6px 14px;font-size:15px}
+
+  /* Sections */
+  .section{padding:104px 0}
+  .section-head{max-width:680px;margin-bottom:52px}
+  .section-head h2{font-size:clamp(32px,4vw,46px);font-weight:800;margin-bottom:14px}
+  .section-head p{color:var(--slate);font-size:18px}
+
+  /* About */
+  .about{display:grid;grid-template-columns:1fr 1fr;gap:72px;align-items:start}
+  .about-copy p{font-size:18px;max-width:34em}
+  .about-copy p + p{margin-top:18px}
+  .skillsets{display:grid;gap:18px}
+  .skillset{background:var(--white);border:1px solid var(--line);border-radius:14px;padding:22px 24px}
+  .skillset h3{font-size:19px;margin-bottom:12px;display:flex;align-items:center;gap:10px}
+  .skillset h3::before{content:"";width:10px;height:10px;border-radius:3px;background:var(--cobalt)}
+  .skillset:nth-child(2) h3::before{background:var(--saffron)}
+  .skillset:nth-child(3) h3::before{background:var(--ink)}
+  .chips{list-style:none;display:flex;flex-wrap:wrap;gap:8px}
+  .chips li{font-size:14.5px;background:var(--paper);border:1px solid var(--line);border-radius:8px;padding:5px 11px}
+
+  /* Case studies */
+  .work{background:var(--white);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+  .case{display:grid;grid-template-columns:.9fr 2fr;gap:56px;padding:44px 0;border-top:1px solid var(--line)}
+  .case:last-child{border-bottom:1px solid var(--line)}
+  .case-title h3{font-size:clamp(24px,2.6vw,30px);font-weight:700;margin-bottom:12px}
+  .case-title .theme{display:inline-block;font-size:14px;font-weight:600;color:var(--cobalt-deep);background:rgba(47,75,255,.1);border-radius:6px;padding:3px 10px;margin-bottom:14px}
+  .case:nth-of-type(even) .theme{color:#8A5A00;background:rgba(255,176,32,.18)}
+  .case-body{display:grid;grid-template-columns:repeat(3,1fr);gap:28px}
+  .case-body h4{font-family:var(--display);font-size:17px;margin-bottom:8px;color:var(--ink)}
+  .case-body p{font-size:16px;color:#3A4060}
+
+  /* Experience: a real sequence, so a timeline */
+  .timeline{list-style:none;position:relative;margin-left:8px}
+  .timeline::before{content:"";position:absolute;left:0;top:10px;bottom:10px;width:2px;background:linear-gradient(var(--cobalt),var(--saffron))}
+  .role{position:relative;display:grid;grid-template-columns:190px 1fr;gap:28px;padding:0 0 42px 36px}
+  .role:last-child{padding-bottom:0}
+  .role::before{content:"";position:absolute;left:-7px;top:7px;width:16px;height:16px;border-radius:50%;background:var(--paper);border:3px solid var(--cobalt)}
+  .role:first-child::before{background:var(--cobalt);box-shadow:0 0 0 6px rgba(47,75,255,.15)}
+  .role .years{font-family:var(--display);font-weight:700;font-size:18px;color:var(--slate)}
+  .role h3{font-size:22px;font-weight:700;margin-bottom:2px}
+  .role .org{color:var(--cobalt-deep);font-weight:600;margin-bottom:8px}
+  .role p{max-width:40em;color:#3A4060}
+
+  /* Credentials */
+  .creds{display:grid;grid-template-columns:1fr 1.3fr;gap:28px}
+  .cred-group{background:var(--white);border:1px solid var(--line);border-radius:16px;padding:30px}
+  .cred-group h3{font-size:24px;margin-bottom:20px}
+  .cred{padding:14px 0;border-top:1px solid var(--line)}
+  .cred:first-of-type{border-top:none;padding-top:0}
+  .cred strong{display:block;font-size:17px}
+  .cred span{color:var(--slate);font-size:15px}
+
+  /* Contact */
+  .contact{background:var(--ink);color:#fff;padding:100px 0;position:relative;overflow:hidden}
+  .contact::after{content:"";position:absolute;left:-120px;bottom:-200px;width:520px;height:520px;border-radius:50%;background:radial-gradient(circle, rgba(255,176,32,.22), rgba(255,176,32,0) 65%)}
+  .contact .wrap{position:relative;z-index:1;display:grid;grid-template-columns:1.2fr 1fr;gap:48px;align-items:end}
+  .contact h2{font-size:clamp(36px,5vw,58px);font-weight:800;margin-bottom:16px}
+  .contact p{color:#B9BEDF;font-size:19px;max-width:30em}
+  .contact .actions{justify-content:flex-end}
+  .contact .btn-secondary{border-color:#fff;color:#fff}
+  .contact .btn-secondary:hover{background:#fff;color:var(--ink)}
+  .contact .btn-primary{background:var(--saffron);color:var(--ink)}
+  .contact .btn-primary:hover{background:#FFC24D}
+  footer{background:var(--ink);color:#8D95C4;font-size:14px;padding:0 0 36px}
+  footer .wrap{border-top:1px solid rgba(255,255,255,.12);padding-top:24px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px}
+  footer a{color:#B9BEDF}
+
+  /* Responsive */
+  @media (max-width:960px){
+    .hero .wrap,.about,.case,.contact .wrap,.creds{grid-template-columns:1fr}
+    .hero .wrap{gap:48px}
+    .case{gap:22px}
+    .contact .actions{justify-content:flex-start}
+  }
+  @media (max-width:720px){
+    .wrap{padding:0 22px}
+    .nav ul li:not(:last-child){display:none}
+    .hero{padding:56px 0 64px}
+    .section{padding:72px 0}
+    .case-body{grid-template-columns:1fr;gap:16px}
+    .role{grid-template-columns:1fr;gap:4px;padding-left:30px}
+    .props div{grid-template-columns:1fr;gap:0}
+    .object::after{display:none}
+  }
+  @media print{.nav,.actions,.hero::before,.contact::after{display:none}.contact,footer{background:#fff;color:var(--ink)}}
+</style>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="nav">
+  <div class="wrap">
+    <a class="logo" href="#top" aria-label="Atik Mohan Lal, back to top"><i aria-hidden="true"></i>Atik Mohan Lal</a>
+    <nav aria-label="Main">
+      <ul>
+        <li><a href="#about">About</a></li>
+        <li><a href="#work">Selected work</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a class="pill" href="#contact">Get in touch</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+  <section class="hero" id="top">
+    <div class="wrap">
+      <div>
+        <h1>I build the content platforms regulated industries run on.</h1>
+        <p class="lede">Senior Solutions Architect with nearly 20 years of hands-on Documentum experience. I design, integrate and lead the enterprise content management systems behind business-critical records, from the object model up to the roadmap.</p>
+        <div class="actions">
+          <a class="btn btn-primary" href="#work">See selected work</a>
+          <a class="btn btn-secondary" href="#contact">Get in touch</a>
+        </div>
+      </div>
+
+      <aside class="object" aria-label="Profile summary">
+        <div class="object-head">
+          <span class="doc" aria-hidden="true"></span>
+          <div>
+            <strong>Atik Mohan Lal</strong>
+            <span>Profile properties</span>
+          </div>
+        </div>
+        <dl class="props">
+          <div><dt>role</dt><dd>Senior Solutions Architect</dd></div>
+          <div><dt>current</dt><dd>Content Management Portfolio Lead</dd></div>
+          <div><dt>documentum_since</dt><dd>2007</dd></div>
+          <div><dt>platforms</dt><dd>Content Server, D2, Webtop, InfoArchive</dd></div>
+          <div><dt>builds_with</dt><dd>Java, DFC, REST, Oracle, WebLogic</dd></div>
+          <div><dt>based_in</dt><dd>Washington DC</dd></div>
+          <div><dt>status</dt><dd><span class="status">Open to architect roles</span></dd></div>
+        </dl>
+      </aside>
+    </div>
+  </section>
+
+  <div class="band" aria-label="Industries served">
+    <div class="wrap">
+      <p>Industries I've served</p>
+      <ul>
+        <li>Energy</li><li>Nuclear</li><li>Pharmaceuticals</li><li>Transportation</li><li>Financial services</li><li>Healthcare</li><li>Insurance</li><li>Government</li>
+      </ul>
+    </div>
+  </div>
+
+  <section class="section" id="about">
+    <div class="wrap about">
+      <div class="about-copy">
+        <div class="section-head" style="margin-bottom:28px">
+          <h2>Where business needs meet platform design</h2>
+        </div>
+        <p>I started out writing Java and WDK customizations, designing object and security models, and running migrations and upgrades. Today I lead an enterprise Documentum portfolio and the operations team behind it: I own the technical roadmap, approve solution designs and manage the vendor relationships that keep the platform moving forward.</p>
+        <p>The thread through all of it is translation. I turn stakeholder needs into practical, supportable architecture and keep production stable while the platform evolves. Lately that includes applying generative AI, RAG and agentic workflows to content and document processing.</p>
+      </div>
+      <div class="skillsets">
+        <div class="skillset">
+          <h3>Architecture</h3>
+          <ul class="chips">
+            <li>Solution design</li><li>Object &amp; security models</li><li>Technical roadmaps</li><li>Enterprise integration</li><li>Performance tuning</li><li>Migrations &amp; upgrades</li>
+          </ul>
+        </div>
+        <div class="skillset">
+          <h3>Platforms &amp; technology</h3>
+          <ul class="chips">
+            <li>Documentum Content Server</li><li>D2</li><li>Webtop &amp; WDK</li><li>DFC &amp; Java</li><li>REST Services</li><li>OTDS</li><li>InfoArchive</li><li>Oracle</li><li>WebLogic</li><li>SAP &amp; SharePoint integration</li><li>Azure DevOps</li>
+          </ul>
+        </div>
+        <div class="skillset">
+          <h3>Leadership</h3>
+          <ul class="chips">
+            <li>Cross-functional leadership</li><li>Vendor management</li><li>Stakeholder management</li><li>Team leadership &amp; mentoring</li><li>Change management</li><li>Records management &amp; compliance</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section work" id="work">
+    <div class="wrap">
+      <div class="section-head">
+        <h2>Selected work</h2>
+        <p>The kinds of problems I'm brought in to solve. Details are kept general out of respect for the organizations involved.</p>
+      </div>
+
+      <article class="case">
+        <div class="case-title">
+          <span class="theme">Platform delivery</span>
+          <h3>A modern content experience across a regulated enterprise</h3>
+        </div>
+        <div class="case-body">
+          <div><h4>The challenge</h4><p>Give every user a modern way to work with controlled documents without disrupting the records processes the business depends on.</p></div>
+          <div><h4>My approach</h4><p>Led the program from business case and governance through architecture, phased rollout and change management, working closely with the vendor and records leadership.</p></div>
+          <div><h4>The result</h4><p>A new interface live across the organization, validated in every environment and handed over cleanly to operations.</p></div>
+        </div>
+      </article>
+
+      <article class="case">
+        <div class="case-title">
+          <span class="theme">Reliability</span>
+          <h3>Turning an unstable platform into a dependable one</h3>
+        </div>
+        <div class="case-body">
+          <div><h4>The challenge</h4><p>Recurring outages and an aging runtime were putting availability and user confidence at risk.</p></div>
+          <div><h4>My approach</h4><p>Partnered with the vendor on targeted redesign: high availability for authentication, server tuning, product fixes and a runtime modernization.</p></div>
+          <div><h4>The result</h4><p>A more resilient, supportable foundation and lower operational risk for day-to-day service.</p></div>
+        </div>
+      </article>
+
+      <article class="case">
+        <div class="case-title">
+          <span class="theme">Integration</span>
+          <h3>Untangling a long-running cross-system integration issue</h3>
+        </div>
+        <div class="case-body">
+          <div><h4>The challenge</h4><p>A business-critical integration between core enterprise systems had been unreliable for years, threatening data integrity.</p></div>
+          <div><h4>My approach</h4><p>Brought infrastructure, application and vendor teams to one table, then coordinated testing, deployments and code fixes end to end.</p></div>
+          <div><h4>The result</h4><p>A more reliable integration and stronger protection for the records that depend on it.</p></div>
+        </div>
+      </article>
+
+      <article class="case">
+        <div class="case-title">
+          <span class="theme">Strategy &amp; AI</span>
+          <h3>Getting a content platform ready for cloud and AI</h3>
+        </div>
+        <div class="case-body">
+          <div><h4>The challenge</h4><p>New AI initiatives wanted access to platform content, and the platform itself needed a clear long-term direction.</p></div>
+          <div><h4>My approach</h4><p>Led an AI proof of concept, set guardrails for data access and system load, and shaped a multi-year roadmap covering cloud deployment and AI enablement.</p></div>
+          <div><h4>The result</h4><p>AI teams got the content they needed without putting stability at risk, and leadership gained a sound basis for investment decisions.</p></div>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <section class="section" id="experience">
+    <div class="wrap">
+      <div class="section-head">
+        <h2>Experience</h2>
+        <p>Nearly two decades building, integrating and leading Documentum platforms.</p>
+      </div>
+      <ol class="timeline">
+        <li class="role">
+          <div class="years">2023 – now</div>
+          <div>
+            <h3>Content Management Portfolio Lead</h3>
+            <p class="org">Constellation Energy</p>
+            <p>Lead the enterprise Documentum platform and its operations team for Nuclear, Power, Corporate and Commercial business groups, owning the roadmap, design approvals, vendor relationships and platform lifecycle.</p>
+          </div>
+        </li>
+        <li class="role">
+          <div class="years">2014 – 2022</div>
+          <div>
+            <h3>Senior Consultant</h3>
+            <p class="org">Reveille Software</p>
+            <p>Delivered architecture, integration and implementation consulting to enterprise clients across financial services, healthcare, energy, insurance and government.</p>
+          </div>
+        </li>
+        <li class="role">
+          <div class="years">2013</div>
+          <div>
+            <h3>Technical Team Lead</h3>
+            <p class="org">Amtrak</p>
+            <p>Headed a new Documentum implementation that took the business from paper to digital, including object and permissions models, a customized Webtop and a content migration.</p>
+          </div>
+        </li>
+        <li class="role">
+          <div class="years">2012 – 2013</div>
+          <div>
+            <h3>Sr. Application Designer/Developer</h3>
+            <p class="org">Dominion Power</p>
+            <p>Architected the security model for an enterprise-wide Documentum implementation and improved the performance of WDK web applications.</p>
+          </div>
+        </li>
+        <li class="role">
+          <div class="years">2007 – 2012</div>
+          <div>
+            <h3>Documentum Architect</h3>
+            <p class="org">Mascon Global</p>
+            <p>Architected, customized and upgraded Documentum for clients in oil and gas, nuclear energy and pharmaceuticals, with integrations to SAP, SharePoint and learning management systems.</p>
+          </div>
+        </li>
+      </ol>
+    </div>
+  </section>
+
+  <section class="section" id="credentials" style="padding-top:0">
+    <div class="wrap creds">
+      <div class="cred-group">
+        <h3>Education</h3>
+        <div class="cred"><strong>Master of Science</strong><span>New Jersey Institute of Technology, 2008</span></div>
+        <div class="cred"><strong>B.S. in Computer Science</strong><span>Osmania University, 2005</span></div>
+      </div>
+      <div class="cred-group">
+        <h3>Certifications</h3>
+        <div class="cred"><strong>AI Foundations + Agentic AI Cohort</strong><span>Tilian AI, 2026</span></div>
+        <div class="cred"><strong>AWS Certified Cloud Practitioner</strong><span>Amazon Web Services, 2022</span></div>
+        <div class="cred"><strong>AWS Technical Foundations</strong><span>Amazon Web Services, 2022</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="contact" id="contact">
+    <div class="wrap">
+      <div>
+        <h2>Let's talk architecture.</h2>
+        <p>I'm open to solution architecture and ECM leadership roles. Email me for a copy of my resume or to start a conversation.</p>
+      </div>
+      <div class="actions">
+        <a class="btn btn-primary" href="mailto:atik.lal@gmail.com?subject=Resume%20request">Request my resume</a>
+        <a class="btn btn-secondary" href="https://www.linkedin.com/in/atiklal" target="_blank" rel="noopener">View LinkedIn</a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <span>&copy; <span id="yr">2026</span> Atik Mohan Lal</span>
+    <a href="mailto:atik.lal@gmail.com">atik.lal@gmail.com</a>
+  </div>
+</footer>
+<script>document.getElementById('yr').textContent=new Date().getFullYear();</script>
+</body>
+</html>
